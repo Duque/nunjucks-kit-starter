@@ -1,0 +1,20 @@
+{# Variables list #}
+{% include "variables.njk" %}
+{# Head  #}
+{% include "head.njk" %}
+
+<body>
+
+  {# Header component #}
+  {% include "components/header.njk" %}
+
+  <main class="os-container">
+
+    {% block content %}{% endblock %}
+
+  </main>
+
+  <script src=""></script>
+
+</body>
+</html>

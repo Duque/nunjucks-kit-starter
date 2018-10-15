@@ -1,0 +1,22 @@
+{% extends "../templates/base.njk" %}
+
+{% set page = {
+	title: 'Obras de Arte',
+	url: 'index.html'
+} %}
+{% set breadcrumbsItems = ['museo','obras'] %}
+{% set artItems = ['The Battle of Waterloo', 'Jan Willem', '1824', 'Pintura', 'Óleo sobre lienzo'] %}
+
+{% block content %}
+
+	{# Breadcrumbs component #}
+	{% import "components/breadcrumbs.njk" as breadcrumbs %}
+	{{ breadcrumbs.breadcrumbs(breadcrumbsItems) }}
+
+	{# Search component #}
+  {% include "../templates/components/search.njk" %}
+
+	{# Art list component #}
+  {% include "../templates/components/art-list.njk" %}
+
+{% endblock %}

@@ -1,0 +1,311 @@
+/* SCSS common classes */
+
+
+// Base
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $default-size;
+}
+
+body {
+	padding-top: 80px; 
+	padding-bottom: 3rem;
+	font-family: $default-font;
+	font-weight: 400;
+	color: $black;
+	background-color: $white;
+}
+
+p {
+	margin-bottom: 1rem;
+	line-height: 18px;
+}
+a {
+	color: $blue;
+	text-decoration: none;
+}
+
+hr {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+	border: 1px solid $blue;
+}
+
+// Typo
+
+.h1 {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 45px;
+}
+.h2 {
+	font-family: 'IBM Plex Sans';
+	font-size: 18px;
+	margin-bottom: 1rem;
+	color: $blue-dark;
+}
+.h3 {
+
+}
+
+
+// Minimal Grid
+.os-container {
+	position: relative;
+	width: 100%;
+	max-width: $desktop-width;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.os-column {
+
+	&--left {
+		width: 30%;
+		float: left;
+	}
+
+	&--right {
+		width: 60%;
+		float: right;
+	}
+}
+
+// .btn (Button) Component
+.btn {
+	font-size: 1.5rem;
+	color: $white;
+	background-color: $blue;
+}
+
+// Header component
+.os-header {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 48px;
+	color: $white;
+	background-color: $blue-dark;
+
+	&__left-side {
+		float: left;
+	}
+	&__right-side {
+		float: right;
+	}
+
+	h1 {
+		display: inline-block;
+		font-size: $medium-text;
+		font-weight: 500;
+		margin: 1rem;
+		text-transform: capitalize;
+	}
+
+	.btn {
+		margin-left: 1rem;
+		color: $cyan;
+		background-color: transparent;
+		border: 0;
+	}
+}
+
+// Breadcrumbs component
+.os-breadcrumbs {
+	margin-bottom: 3rem;
+
+	&__item {
+		display: inline-block;
+		margin-right: 1.15rem;
+		text-transform: capitalize;
+
+		a:after {
+			display: inline-block;
+			content: "/";
+			margin-left: 1.15rem;
+	
+		}
+		&:last-child {
+			a:after {
+				display: none;
+			}
+		}
+	}
+}
+
+// Search component
+.os-search {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	
+	&__input, &__btn-search {
+		height: 32px;
+		border: 0;
+	}
+	&__input {
+		width: 304px;
+		border-bottom: 1px solid $cyan;
+		position: relative;
+		top: -3px;
+		
+		&:placeholder-shown {
+			color: $black;
+		}
+	}
+	&__btn-search {
+		@extend .btn;
+		width: 32px;
+
+		.material-icons {
+		}
+	}
+	&__btn-close {
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    right: 3rem;
+    top: 6px;
+	}
+
+}
+
+// Art list component
+.os-art-list {
+	width: 100%;
+	border: 1px solid #DFE3E6;
+	border-collapse: collapse;
+	border-spacing:0px;
+	
+	tbody tr {
+		border-bottom: 1px solid #DFE3E6;
+
+		&:hover, &.active {
+			position: relative;
+			z-index: 1;
+			background-color: $gray-background;
+			border: 1px solid $blue;
+			//cursor: pointer;
+
+			& td {
+				border-bottom: 1px solid $blue;
+				border-top: 1px solid $blue;
+				
+				&:last-child {
+					content: '...';
+				}
+			}
+		}
+	}
+	th, td {
+		padding: 1rem;
+		text-align: left;
+
+		&:last-child {
+			text-align: center;
+		}
+	}
+	th {
+		font-weight: 500;
+		background-color: $gray-background;
+	}
+	td {
+		&:first-child {
+			font-weight: 500;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+}
+
+// Pagination component
+.os-pagination {
+	width: 100%;
+	margin-top: 4rem;
+	text-align: center;
+
+	&__item {
+		display: inline-block;
+
+		&.active {
+			a {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+
+		a {
+			display: block;
+			width: 24px;
+			height: 24px;
+			padding-top: 5px;
+			font-weight: 500;
+		}
+	}
+}
+
+// Art Detail Component
+.os-detail {
+	* {
+		color: $blue-dark;
+	}
+
+	&__author {
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+		font-size: 18px;
+	}
+
+	&__description {
+		border-bottom: 1px solid #DFE3E6;
+		margin-bottom: 3rem;
+		padding-bottom: 21px;
+		overflow: hidden; 
+
+		&:last-child {
+			border: 0;
+		}
+
+		&__title {
+			float: left;
+			width: 25%;
+			min-width: 130px;
+			font-weight: bold;
+		}
+
+		&__list {
+			width: 75%;
+			float: right;
+			margin-top: 5px;
+
+			dt {
+				width: 25%;
+				float: left;
+				clear: right;
+				font-weight: 500;
+			}
+			dd {
+				width: 75%;
+				float: right;
+				font-weight: regular;
+			}
+			dt, dd {
+				margin-bottom: 1.15rem;
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+// Other things
+.figure {
+	img {
+		width: 100%;
+	}
+}

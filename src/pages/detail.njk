@@ -1,0 +1,29 @@
+{% extends "../templates/two-columns.njk" %}
+
+{% set page = {
+	title: 'detail',
+	url: 'detail.html'
+} %}
+{% set breadcrumbsItems = ['museo','obras', 'detail'] %}
+
+{% block content %}
+
+	{# Breadcrumbs component #}
+	{% import "components/breadcrumbs.njk" as breadcrumbs %}
+	{{ breadcrumbs.breadcrumbs(breadcrumbsItems) }}
+
+{% endblock %}
+
+{% block left %}
+
+	{# Figure component #}
+  {% include "../templates/components/figure.njk" %}
+
+{% endblock %}
+
+{% block right %}
+
+	{# Detail component #}
+  {% include "../templates/components/art-detail.njk" %}
+
+{% endblock %}

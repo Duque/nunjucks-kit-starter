@@ -1,0 +1,9 @@
+{% macro breadcrumbs(sections) %}
+	<nav class="os-breadcrumbs">
+		<ol>
+			{% for i in sections %}
+				<li class="os-breadcrumbs__item"><a href="{% if (i=='museo') or (i=='obras') %}index.html{% else %}{{i}}.html{% endif %}">{{i}}</a></li>
+			{% endfor %}
+		</ol>
+	</nav>
+{% endmacro %}

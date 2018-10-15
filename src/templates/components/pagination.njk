@@ -1,0 +1,22 @@
+<nav class="os-pagination">
+	<ul>
+		<li class="os-pagination__item">
+			<a href="index.html">
+				<i class="material-icons">keyboard_arrow_left</i>
+			</a>
+		</li>
+		<li class="os-pagination__item active">
+				<a href="index.html">1</a>
+			</li>
+		{% for i in [2,3,4,5,6,7] %}
+			<li class="os-pagination__item">
+				<a href="index.html">{{i}}</a>
+			</li>
+		{% endfor %}
+		<li class="os-pagination__item">
+			<a href="index.html">
+				<i class="material-icons">keyboard_arrow_right</i>
+			</a>
+		</li>
+	</ul>
+</nav>

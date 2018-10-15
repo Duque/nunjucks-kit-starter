@@ -1,0 +1,34 @@
+{# Variables list #}
+{% include "variables.njk" %}
+{# Head  #}
+{% include "head.njk" %}
+
+<body>
+
+  {# Header component #}
+  {% include "components/header.njk" %}
+
+  <main class="os-container">
+
+		{% block content %}{% endblock %}
+		
+		<article>
+			<div class="os-column--left">
+				
+				{% block left %}{% endblock %}
+			
+			</div>
+			
+			<div class="os-column--right">
+			
+				{% block right %}{% endblock %}
+				
+			</div>
+		</article>
+
+  </main>
+
+  <script src=""></script>
+
+</body>
+</html>

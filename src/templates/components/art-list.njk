@@ -1,0 +1,28 @@
+<h1 class="h2">Obras</h1>
+<table class="os-art-list">
+	<thead>
+		<tr>
+			<th>Obra <i class="material-icons">keyboard_arrow_down</i></th>
+			<th>Artista</th>
+			<th>Año</th>
+			<th>Tipo</th>
+			<th>Materia / Técnica</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in [0,1,2,3,4,5,6,7,8,9] %}
+				<tr>
+					<td><a href="detail.html">{{artItems[0]}}</a></td>
+					<td>{{artItems[1]}}</td>
+					<td>{{artItems[2]}}</td>
+					<td>{{artItems[3]}}</td>
+					<td>{{artItems[4]}}</td>
+					<td></td>
+				</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{# Pagination component #}
+{% include "components/pagination.njk" %}

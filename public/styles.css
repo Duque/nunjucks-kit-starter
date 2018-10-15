@@ -1,0 +1,76 @@
+/*	Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* OS Variables */
+/* SCSS common classes */
+* { box-sizing: border-box; }
+html { font-size: 14px; }
+body { padding-top: 80px; padding-bottom: 3rem; font-family: "Roboto"; font-weight: 400; color: #152935; background-color: #fff; }
+p { margin-bottom: 1rem; line-height: 18px; }
+a { color: #3D70B2; text-decoration: none; }
+hr { margin-top: 4rem; margin-bottom: 2rem; border: 1px solid #3D70B2; }
+.h1 { font-weight: 600; font-size: 36px; line-height: 45px; }
+.h2 { font-family: 'IBM Plex Sans'; font-size: 18px; margin-bottom: 1rem; color: #152935; }
+.os-container { position: relative; width: 100%; max-width: 1116px; margin: 0 auto; padding: 1rem; }
+.os-column--left { width: 30%; float: left; }
+.os-column--right { width: 60%; float: right; }
+.btn, .os-search__btn-search { font-size: 1.5rem; color: #fff; background-color: #3D70B2; }
+.os-header { position: absolute; top: 0px; width: 100%; height: 48px; color: #fff; background-color: #152935; }
+.os-header__left-side { float: left; }
+.os-header__right-side { float: right; }
+.os-header h1 { display: inline-block; font-size: 18px; font-weight: 500; margin: 1rem; text-transform: capitalize; }
+.os-header .btn, .os-header .os-search__btn-search { margin-left: 1rem; color: #5AAAFA; background-color: transparent; border: 0; }
+.os-breadcrumbs { margin-bottom: 3rem; }
+.os-breadcrumbs__item { display: inline-block; margin-right: 1.15rem; text-transform: capitalize; }
+.os-breadcrumbs__item a:after { display: inline-block; content: "/"; margin-left: 1.15rem; }
+.os-breadcrumbs__item:last-child a:after { display: none; }
+.os-search { position: absolute; top: 1rem; right: 1rem; }
+.os-search__input, .os-search__btn-search { height: 32px; border: 0; }
+.os-search__input { width: 304px; border-bottom: 1px solid #5AAAFA; position: relative; top: -3px; }
+.os-search__input:placeholder-shown { color: #152935; }
+.os-search__btn-search { width: 32px; }
+.os-search__btn-close { position: absolute; background-color: transparent; border: 0; right: 3rem; top: 6px; }
+.os-art-list { width: 100%; border: 1px solid #DFE3E6; border-collapse: collapse; border-spacing: 0px; }
+.os-art-list tbody tr { border-bottom: 1px solid #DFE3E6; }
+.os-art-list tbody tr:hover, .os-art-list tbody tr.active { position: relative; z-index: 1; background-color: rgba(85, 150, 230, 0.1); border: 1px solid #3D70B2; }
+.os-art-list tbody tr:hover td, .os-art-list tbody tr.active td { border-bottom: 1px solid #3D70B2; border-top: 1px solid #3D70B2; }
+.os-art-list tbody tr:hover td:last-child, .os-art-list tbody tr.active td:last-child { content: '...'; }
+.os-art-list th, .os-art-list td { padding: 1rem; text-align: left; }
+.os-art-list th:last-child, .os-art-list td:last-child { text-align: center; }
+.os-art-list th { font-weight: 500; background-color: rgba(85, 150, 230, 0.1); }
+.os-art-list td:first-child { font-weight: 500; }
+.os-art-list td a { color: inherit; }
+.os-pagination { width: 100%; margin-top: 4rem; text-align: center; }
+.os-pagination__item { display: inline-block; }
+.os-pagination__item.active a { background-color: #3D70B2; color: #fff; }
+.os-pagination__item a { display: block; width: 24px; height: 24px; padding-top: 5px; font-weight: 500; }
+.os-detail * { color: #152935; }
+.os-detail__author { margin-top: 3rem; margin-bottom: 1rem; font-size: 18px; }
+.os-detail__description { border-bottom: 1px solid #DFE3E6; margin-bottom: 3rem; padding-bottom: 21px; overflow: hidden; }
+.os-detail__description:last-child { border: 0; }
+.os-detail__description__title { float: left; width: 25%; min-width: 130px; font-weight: bold; }
+.os-detail__description__list { width: 75%; float: right; margin-top: 5px; }
+.os-detail__description__list dt { width: 25%; float: left; clear: right; font-weight: 500; }
+.os-detail__description__list dd { width: 75%; float: right; font-weight: regular; }
+.os-detail__description__list dt, .os-detail__description__list dd { margin-bottom: 1.15rem; font-size: 10px; }
+.figure img { width: 100%; }
+/* Fonts */
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"), url(fonts/roboto/Roboto-Regular.ttf); }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"), url(fonts/roboto/Roboto-Medium.ttf); }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"), url(fonts/roboto/Roboto-Bold.ttf); }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 600; src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(fonts/ibm/IBMPlexSans-SemiBold.ttf); }
+@font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(fonts/material/material-icons.woff2) format("woff2"); }
+.material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; display: inline-block; line-height: 1; text-transform: none; letter-spacing: 0; word-wrap: normal; white-space: nowrap; direction: ltr; vertical-align: middle; /* Support for all WebKit browsers. */ -webkit-font-smoothing: antialiased; /* Support for Safari and Chrome. */ text-rendering: optimizeLegibility; /* Support for Firefox. */ -moz-osx-font-smoothing: grayscale; /* Support for IE. */ font-feature-settings: 'liga'; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-20 { font-size: 20px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-56 { font-size: 56px; }
+.material-icons.md-100 { font-size: 100px; }
+.material-icons.border { padding: 5px; }
