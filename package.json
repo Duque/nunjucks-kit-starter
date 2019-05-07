@@ -11,7 +11,8 @@
   "email": "info@cas-training.com",
   "license": "ISC",
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "tar": ">=4.4.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
